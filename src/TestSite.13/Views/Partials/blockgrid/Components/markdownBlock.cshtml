@@ -10,11 +10,15 @@
 
 <div>
     <div>
-        <span class="display-1">Markdown Editor - HTML Output</span>
-        @Html.Raw(Model.Content.Markdown.Html)
+        <span class="display-3">Raw HTML</span>
+        <pre><code>@Html.Raw(Html.Encode(Model.Content.Markdown.Html))</code></pre>
     </div>
     <div>
-        <span class="display-1">Markdown Editor - Raw Output</span>
+        <span class="display-3">Markdown</span>
         <pre><code>@Model.Content.Markdown.Raw</code></pre>
+    </div>
+    <div>
+        <span class="display-3">Rendered HTML</span>
+        @Html.Raw(Model.Content.Markdown.Html)
     </div>
 </div>
