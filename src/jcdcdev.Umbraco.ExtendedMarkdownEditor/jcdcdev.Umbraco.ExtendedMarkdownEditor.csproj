@@ -9,12 +9,12 @@
         <ContentTargetFolders>.</ContentTargetFolders>
         <Product>jcdcdev.Umbraco.ExtendedMarkdownEditor</Product>
         <PackageId>jcdcdev.Umbraco.ExtendedMarkdownEditor</PackageId>
-        <Title>Extended Umbraco Markdown Editor</Title>
-        <Description>Get more from the Umbraco Markdown editor. Provides access to the raw Markdown and transformed HTML. Adds data type configuration to control Markdown to HTML settings.</Description>
+        <Title>Extended Markdown Editor for Umbraco CMS</Title>
+        <Description>Get more from the Umbraco Markdown editor. A lightweight custom property editor for Umbraco that sits on top of the default Umbraco.MarkdownEditor.</Description>
         <PackageTags>umbraco;umbraco-marketplace</PackageTags>
         <Authors>jcdcdev</Authors>
         <Copyright>$([System.DateTime]::UtcNow.ToString(`yyyy`)) © James Carter</Copyright>
-        <PackageProjectUrl>https://jcdc.dev/umbraco-packages/markdown-editor</PackageProjectUrl>
+        <PackageProjectUrl>https://jcdc.dev/umbraco-packages/extended-markdown-editor</PackageProjectUrl>
         <RepositoryUrl>https://github.com/jcdcdev/jcdcdev.Umbraco.ExtendedMarkdownEditor</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <RepositoryType>git</RepositoryType>
