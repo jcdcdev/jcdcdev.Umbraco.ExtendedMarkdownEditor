@@ -16,13 +16,10 @@
         <Copyright>$([System.DateTime]::UtcNow.ToString(`yyyy`)) © James Carter</Copyright>
         <PackageProjectUrl>https://jcdc.dev/umbraco-packages/extended-markdown-editor</PackageProjectUrl>
         <RepositoryUrl>https://github.com/jcdcdev/jcdcdev.Umbraco.ExtendedMarkdownEditor</RepositoryUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReadmeFile>README_nuget.md</PackageReadmeFile>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>images\icon.png</PackageIcon>
-        <NuGetAuditMode>all</NuGetAuditMode>
-        <NuGetAuditLevel>high</NuGetAuditLevel>
-        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     </PropertyGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
@@ -56,6 +53,6 @@
 
     <ItemGroup>
         <None Include="..\..\docs\icon.png" Pack="true" PackagePath="images\icon.png"/>
-        <None Include="..\..\.github\README.md" Pack="true" PackagePath="\"/>
+        <None Include="..\..\docs\README_nuget.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 </Project>
