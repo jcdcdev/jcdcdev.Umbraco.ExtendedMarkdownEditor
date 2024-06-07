@@ -357,3 +357,4 @@ src/.idea
 *.sqlite.db*
 .idea/
 /src/TestSite.*/umbraco/Data/TEMP/
+/src/jcdcdev.Umbraco.ExtendedMarkdownEditor/wwwroot/App_Plugins/jcdcdev.Umbraco.ExtendedMarkdownEditor/dist/

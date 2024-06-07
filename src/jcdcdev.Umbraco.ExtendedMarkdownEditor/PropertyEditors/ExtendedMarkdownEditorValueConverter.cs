@@ -31,7 +31,7 @@ public class ExtendedMarkdownEditorValueConverter : MarkdownEditorValueConverter
         var config = propertyType.DataType.ConfigurationAs<ExtendedMarkdownConfiguration>();
         var options = new MarkdownConvertorOptions
         {
-            HeaderOffset = config?.HeaderOffset,
+            HeaderOffset = config?.GetHeaderOffset(),
             ExternalLinksOpenInNewTab = config?.ExternalLinksOpenInNewTab ?? false
         };
 
