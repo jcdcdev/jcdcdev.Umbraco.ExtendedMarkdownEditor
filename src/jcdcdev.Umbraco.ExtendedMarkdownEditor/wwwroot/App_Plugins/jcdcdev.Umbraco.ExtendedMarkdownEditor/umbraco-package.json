@@ -1,0 +1,12 @@
+﻿{
+    "name": "jcdcdev.Umbraco.ExtendedMarkdownEditor",
+    "version": "14.0.0",
+    "extensions": [
+        {
+            "name": "extended-markdown-editor.entrypoint",
+            "alias": "extended-markdown-editor.entrypoint",
+            "type": "entryPoint",
+            "js": "/App_Plugins/jcdcdev.Umbraco.ExtendedMarkdownEditor/dist/extended-markdown-editor.js"
+        }
+    ]
+}

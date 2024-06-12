@@ -1,12 +1,25 @@
+using System.Text.Json.Serialization;
 using Umbraco.Cms.Core.PropertyEditors;
 
 namespace jcdcdev.Umbraco.ExtendedMarkdownEditor.PropertyEditors;
 
-public class ExtendedMarkdownConfiguration : MarkdownConfiguration
+public class ExtendedMarkdownConfiguration
 {
-    [ConfigurationField("headerOffset", "Header Offset", "number", Description = "The offset to apply to any header tags")]
-    public int? HeaderOffset { get; set; }
+    [ConfigurationField("headerOffset")]
+    [JsonPropertyName("headerOffset")]
+    public SliderValue? HeaderOffsetValue { get; set; }
 
-    [ConfigurationField("externalLinksOpenInNewTab", "External Links Open In New Tab", "boolean", Description = "Ensures external links open in a new tab")]
+    public int? GetHeaderOffset() => HeaderOffsetValue?.From;
+
+    [ConfigurationField("externalLinksOpenInNewTab")]
     public bool ExternalLinksOpenInNewTab { get; set; }
+}
+
+public class SliderValue
+{
+    [JsonPropertyName("from")]
+    public int From { get; set; }
+    
+    [JsonPropertyName("to")]
+    public int To { get; set; }
 }
