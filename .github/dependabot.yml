@@ -1,6 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: nuget
+    assignees:
+      - "jcdcdev"
     directory: "/"
     schedule:
       interval: "daily"
@@ -9,8 +11,9 @@ updates:
       prefix: "chore"
       include: "scope"
     target-branch: "dev"
-
   - package-ecosystem: npm
+    assignees:
+      - "jcdcdev"
     directory: "/"
     schedule:
       interval: "daily"
