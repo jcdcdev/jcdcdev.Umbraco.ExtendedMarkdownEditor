@@ -1,7 +1,7 @@
 {
     "name": "extended-markdown-editor",
     "private": true,
-    "version": "14.0.0",
+    "version": "15.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite build --watch --emptyOutDir",
@@ -9,14 +9,14 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "lit": "^3.2.0"
+        "lit": "^3.2.1"
     },
     "devDependencies": {
-        "@umbraco-cms/backoffice": "^14.0.0",
-        "typescript": "^5.4.5",
-        "vite": "^5.2.14"
+        "@umbraco-cms/backoffice": "^15.0.0-rc2",
+        "typescript": "^5.6.3",
+        "vite": "^5.4.9"
     },
     "volta": {
-        "node": "21.7.3"
+        "node": "20.18.0"
     }
 }

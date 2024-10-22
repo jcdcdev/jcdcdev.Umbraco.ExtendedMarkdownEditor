@@ -1,5 +1,5 @@
-import {UmbEntryPointOnInit} from "@umbraco-cms/backoffice/extension-api";
-import {ManifestPropertyEditorUi} from "@umbraco-cms/backoffice/extension-registry";
+import { UmbEntryPointOnInit } from "@umbraco-cms/backoffice/extension-api";
+import { ManifestPropertyEditorUi } from "@umbraco-cms/backoffice/property-editor";
 
 export const onInit: UmbEntryPointOnInit = (_host, extensionRegistry) => {
     const alias = 'Umb.PropertyEditorUi.MarkdownEditor';

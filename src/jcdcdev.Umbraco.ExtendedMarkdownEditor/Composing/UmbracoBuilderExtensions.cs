@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.PropertyEditors;
 using Umbraco.Cms.Core.PropertyEditors.ValueConverters;
+using Umbraco.Cms.Infrastructure.Manifest;
 
 namespace jcdcdev.Umbraco.ExtendedMarkdownEditor.Composing;
 
@@ -14,6 +15,7 @@ public static class UmbracoBuilderExtensions
         builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
         builder.PropertyValueConverters().Replace<MarkdownEditorValueConverter, ExtendedMarkdownEditorValueConverter>();
         builder.DataEditors().Exclude<MarkdownPropertyEditor>();
+        builder.Services.AddSingleton<IPackageManifestReader, PackageManifestReader>();
         return builder;
     }
 }

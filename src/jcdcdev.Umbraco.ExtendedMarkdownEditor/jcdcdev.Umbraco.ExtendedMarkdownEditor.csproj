@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <LangVersion>10</LangVersion>
+        <TargetFramework>net9.0</TargetFramework>
+        <LangVersion>12</LangVersion>
         <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -23,14 +23,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Core" Version="14.0.0-rc4"/>
-        <PackageReference Include="Umbraco.Cms.Web.Website" Version="14.0.0-rc4"/>
-        <PackageReference Include="Markdig" Version="0.37.0"/>
-        <PackageReference Include="jcdcdev.Umbraco.Core" Version="14.0.0-alpha0003"/>
+        <PackageReference Include="Umbraco.Cms.Core" Version="15.0.0-rc2" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="15.0.0-rc2" />
+        <PackageReference Include="Markdig" Version="0.37.0" />
+        <PackageReference Include="jcdcdev.Umbraco.Core" Version="15.0.0-alpha0005" />
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-        <Major>14</Major>
+        <Major>15</Major>
         <Minor>$([System.DateTime]::UtcNow.ToString(`yyyy`))</Minor>
         <Patch>$([System.DateTime]::UtcNow.ToString(`MMdd`).TrimStart(`0`))</Patch>
         <Suffix>-alpha-$([System.DateTime]::UtcNow.ToString(`Hmm-ss`).TrimStart(`.`))</Suffix>
@@ -40,7 +40,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\docs\icon.png" Pack="true" PackagePath="images\icon.png"/>
-        <None Include="..\..\docs\README_nuget.md" Pack="true" PackagePath="\"/>
+        <None Include="..\..\docs\icon.png" Pack="true" PackagePath="images\icon.png" />
+        <None Include="..\..\docs\README_nuget.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 </Project>
