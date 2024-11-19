@@ -5,7 +5,7 @@ using Umbraco.Cms.Core.PropertyEditors;
 namespace jcdcdev.Umbraco.ExtendedMarkdownEditor.PropertyEditors;
 
 [DataEditor(
-    Constants.PropertyEditors.Aliases.MarkdownEditor,
+    global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.MarkdownEditor,
     ValueType = ValueTypes.Text,
     ValueEditorIsReusable = true)]
 public class ExtendedMarkdownPropertyEditor : MarkdownPropertyEditor

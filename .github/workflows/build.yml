@@ -13,4 +13,5 @@ jobs:
           project-path: src/jcdcdev.Umbraco.ExtendedMarkdownEditor/jcdcdev.Umbraco.ExtendedMarkdownEditor.csproj
           npm-working-dir: src/jcdcdev.Umbraco.ExtendedMarkdownEditor.Client
           npm-enabled: true
-          umbraco-version: 14
+          umbraco-version: 15
+          dotnet-version: "9"
