@@ -4,7 +4,7 @@
     "net8.0": {
       "jcdcdev.Umbraco.Core": {
         "type": "Direct",
-        "requested": "[13.0.1, )",
+        "requested": "[13.0.1, 14.0.0)",
         "resolved": "13.0.1",
         "contentHash": "yNWhu3EEiqqSXE2b7xy730pVylcsqAaJxaH64HuGVMcZpUq7FfiDVF2mjbB97sx6XIcFpLq8a9btpzZN83mq6w==",
         "dependencies": {
@@ -13,7 +13,7 @@
       },
       "Markdig": {
         "type": "Direct",
-        "requested": "[0.37.0, )",
+        "requested": "[0.37.0, 1.0.0)",
         "resolved": "0.37.0",
         "contentHash": "biiu4MTPFjW55qw6v5Aphtj0MjDLJ14x8ndZwkJUHIeqvaSGKeqhLY7S7Vu/S3k7/c9KwhhnaCDP9hdFNUhcNA=="
       },
