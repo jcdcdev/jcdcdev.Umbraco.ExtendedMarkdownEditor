@@ -26,8 +26,8 @@
         <PackageReference Include="Umbraco.Cms.Core" Version="[13.0.0,14.0.0)"/>
         <PackageReference Include="Umbraco.Cms.Web.Website" Version="[13.0.0,14.0.0)"/>
         <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[13.0.0,14.0.0)"/>
-        <PackageReference Include="Markdig" Version="0.37.0"/>
-        <PackageReference Include="jcdcdev.Umbraco.Core" Version="13.0.1"/>
+        <PackageReference Include="Markdig" Version="[0.37.0,1.0.0)"/>
+        <PackageReference Include="jcdcdev.Umbraco.Core" Version="[13.0.1,14.0.0)"/>
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
