@@ -30,6 +30,11 @@ Replaces `IHtmlEncodedString` with `MarkdownValue` which contains the following 
 - **Html** - The transformed HTML value
 - **Markdown** - The Markdig MarkdownDocument
 
+> [!IMPORTANT]
+> Version 14 will only receive security updates and no new features.
+
+> Please review the [security policy](https://github.com/jcdcdev/jcdcdev.Umbraco.ExtendedMarkdownEditor?tab=security-ov-file#supported-versions) for more information.
+
 ## Quick Start
 
 ```csharp
