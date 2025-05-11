@@ -10,7 +10,7 @@ internal static class MarkdownExtensions
     {
         try
         {
-            document = Markdown.Parse(markdown);
+            document = Markdown.Parse(markdown, true);
             return true;
         }
         catch
