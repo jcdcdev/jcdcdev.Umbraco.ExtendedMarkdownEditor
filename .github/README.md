@@ -30,6 +30,9 @@ Replaces `IHtmlEncodedString` with `MarkdownValue` which contains the following 
 - **Html** - The transformed HTML value
 - **Markdown** - The Markdig MarkdownDocument
 
+> [!NOTE]
+> Version 17 is not released yet.
+
 ## Quick Start
 
 ```csharp
