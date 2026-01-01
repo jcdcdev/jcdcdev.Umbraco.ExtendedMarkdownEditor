@@ -31,13 +31,11 @@ Replaces `IHtmlEncodedString` with `MarkdownValue` which contains the following 
 - **Html** - The transformed HTML value
 - **Markdown** - The Markdig MarkdownDocument
 
-
 ## Quick Start
 
 ```csharp
 dotnet add package jcdcdev.Umbraco.ExtendedMarkdownEditor
 ```
-
 
 ## Contributing
 
