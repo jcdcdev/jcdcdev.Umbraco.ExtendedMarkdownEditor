@@ -35,7 +35,9 @@ Replaces `IHtmlEncodedString` with `MarkdownValue` which contains the following 
 
 > Please review the [security policy](https://github.com/jcdcdev/jcdcdev.Umbraco.ExtendedMarkdownEditor?tab=security-ov-file#supported-versions) for more information.
 
-## Quick Start
+## Installation
+
+### Install Package
 
 ```csharp
 dotnet add package jcdcdev.Umbraco.ExtendedMarkdownEditor
