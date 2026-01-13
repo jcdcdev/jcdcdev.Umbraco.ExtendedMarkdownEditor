@@ -34,7 +34,7 @@ Replaces `IHtmlEncodedString` with `MarkdownValue` which contains the following 
 
 ### Install Package
 
-```csharp
+```powershell
 dotnet add package jcdcdev.Umbraco.ExtendedMarkdownEditor
 ```
 
