@@ -71,5 +71,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("umbracoFile")]
 		public virtual string UmbracoFile => this.Value<string>(_publishedValueFallback, "umbracoFile");
+
+		///<summary>
+		/// Height
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
+		[ImplementPropertyType("umbracoHeight")]
+		public virtual int UmbracoHeight => this.Value<int>(_publishedValueFallback, "umbracoHeight");
+
+		///<summary>
+		/// Width
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
+		[ImplementPropertyType("umbracoWidth")]
+		public virtual int UmbracoWidth => this.Value<int>(_publishedValueFallback, "umbracoWidth");
 	}
 }

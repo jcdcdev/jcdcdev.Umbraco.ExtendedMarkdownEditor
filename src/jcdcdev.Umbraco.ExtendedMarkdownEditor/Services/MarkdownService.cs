@@ -11,22 +11,13 @@ using MarkdownExtensions = jcdcdev.Umbraco.ExtendedMarkdownEditor.Extensions.Mar
 
 namespace jcdcdev.Umbraco.ExtendedMarkdownEditor.Services;
 
-internal class MarkdownService : IMarkdownService
+internal class MarkdownService(IHttpContextAccessor httpContextAccessor, ILogger<MarkdownService> logger) : IMarkdownService
 {
-    private readonly IHttpContextAccessor _httpContextAccessor;
-    private readonly ILogger<MarkdownService> _logger;
-
-    public MarkdownService(IHttpContextAccessor httpContextAccessor, ILogger<MarkdownService> logger)
-    {
-        _httpContextAccessor = httpContextAccessor;
-        _logger = logger;
-    }
-
     public MarkdownValue CreateFromMarkdownString(string markdown, MarkdownConvertorOptions? config = null)
     {
         if (!MarkdownExtensions.TryParse(markdown, out var markdownDocument))
         {
-            _logger.LogWarning("Failed to parse markdown");
+            logger.LogWarning("Failed to parse markdown");
             return MarkdownValue.Empty;
         }
 
@@ -42,10 +33,10 @@ internal class MarkdownService : IMarkdownService
 
         if (config.TransformLinks)
         {
-            var uri = _httpContextAccessor.HttpContext?.Request.GetDisplayUrl();
+            var uri = httpContextAccessor.HttpContext?.Request.GetDisplayUrl();
             if (uri == null)
             {
-                _logger.LogWarning("Failed to get the current request URL");
+                logger.LogWarning("Failed to get the current request URL");
             }
             else
             {
@@ -71,7 +62,7 @@ internal class MarkdownService : IMarkdownService
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error converting markdown to HTML");
+            logger.LogError(ex, "Error converting markdown to HTML");
             throw;
         }
     }
@@ -110,7 +101,7 @@ internal class MarkdownService : IMarkdownService
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error transforming link");
+                logger.LogError(ex, "Error transforming link");
             }
         }
     }
