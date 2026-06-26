@@ -7,18 +7,11 @@ namespace jcdcdev.Umbraco.ExtendedMarkdownEditor.PropertyEditors;
     global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.MarkdownEditor,
     ValueType = ValueTypes.Text,
     ValueEditorIsReusable = true)]
-public class ExtendedMarkdownPropertyEditor : MarkdownPropertyEditor
+public class ExtendedMarkdownPropertyEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : MarkdownPropertyEditor(dataValueEditorFactory)
 {
-    private readonly IIOHelper _ioHelper;
-
     protected override IConfigurationEditor CreateConfigurationEditor()
     {
-        var config = new ExtendedMarkdownConfigurationEditor(_ioHelper);
+        var config = new ExtendedMarkdownConfigurationEditor(ioHelper);
         return config;
-    }
-
-    public ExtendedMarkdownPropertyEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory)
-    {
-        _ioHelper = ioHelper;
     }
 }

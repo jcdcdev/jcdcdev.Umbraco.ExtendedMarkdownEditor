@@ -3,22 +3,18 @@ using jcdcdev.Umbraco.ExtendedMarkdownEditor.Services;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.PropertyEditors;
 using Umbraco.Cms.Core.PropertyEditors.ValueConverters;
+using Umbraco.Cms.Core.Strings;
 using Umbraco.Cms.Core.Templates;
 
 namespace jcdcdev.Umbraco.ExtendedMarkdownEditor.PropertyEditors;
 
-public class ExtendedMarkdownEditorValueConverter : MarkdownEditorValueConverter
+public class ExtendedMarkdownEditorValueConverter(
+    HtmlLocalLinkParser localLinkParser,
+    HtmlUrlParser urlParser,
+    IMarkdownService markdownService,
+    IMarkdownToHtmlConverter markdownToHtmlConverter
+) : MarkdownEditorValueConverter(localLinkParser, urlParser, markdownToHtmlConverter)
 {
-    private readonly IMarkdownService _markdownService;
-
-    public ExtendedMarkdownEditorValueConverter(
-        HtmlLocalLinkParser localLinkParser,
-        HtmlUrlParser urlParser,
-        IMarkdownService markdownService) : base(localLinkParser, urlParser)
-    {
-        _markdownService = markdownService;
-    }
-
     public override Type GetPropertyValueType(IPublishedPropertyType propertyType) => typeof(MarkdownValue);
 
     public override object ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object? inter, bool preview)
@@ -35,6 +31,6 @@ public class ExtendedMarkdownEditorValueConverter : MarkdownEditorValueConverter
             ExternalLinksOpenInNewTab = config?.ExternalLinksOpenInNewTab ?? false
         };
 
-        return _markdownService.CreateFromMarkdownString(s, options);
+        return markdownService.CreateFromMarkdownString(s, options);
     }
 }
